@@ -51,7 +51,7 @@ for c in circles:
 for c in sorted(circles):
     turtle.circle(c.radius)
     turtle.penup()
-    turtle.forward(2 * c.radius + 10)  # move to the side
+    turtle.forward(2 * c.radius + 20)  # move to the side
     turtle.pendown()
 
 turtle.done()
