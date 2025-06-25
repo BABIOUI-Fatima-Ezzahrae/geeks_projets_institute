@@ -16,6 +16,6 @@ SELECT *  FROM customers where lastname='Smith'
 
 SELECT *  FROM customers where lastname='Jones'
 
-SELECT *  FROM customers where lastname!='Scott'
+SELECT *  FROM customers where lastname !='Scott'
 
 

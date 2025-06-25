@@ -10,6 +10,16 @@
             "database": "public",
             "username": "postgres",
             "password": "fati4fleur"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "localhost",
+            "database": "bootcamp",
+            "username": "postgres",
+            "password": "fati4fleur"
         }
     ]
 }
