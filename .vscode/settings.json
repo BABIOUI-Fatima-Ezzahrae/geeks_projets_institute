@@ -20,6 +20,16 @@
             "database": "bootcamp",
             "username": "postgres",
             "password": "fati4fleur"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "localhost",
+            "database": "dvdrental",
+            "username": "postgres",
+            "password": "fati4fleur"
         }
     ]
 }
