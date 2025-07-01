@@ -7,7 +7,7 @@ UPDATE film SET language_id = 3 WHERE film_id in (384, 8,427)
 
 -- Which foreign keys (references) are defined for the customer table? : "store_id" de table store, "address_id" de table address
 
--- How does this affect the way in which we INSERT into the customer table? when we 
+-- How does this affect the way in which we INSERT into the customer table? : Lorsqu'on insère dans la table customer, il faut s'assurer que les valeurs de store_id et address_id existent déjà respectivement dans les tables store et address, sinon l'insertion échouera à cause des clés étrangères.
 
 drop table customer_review
 
