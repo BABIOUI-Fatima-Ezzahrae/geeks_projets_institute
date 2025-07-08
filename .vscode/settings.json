@@ -20,6 +20,16 @@
             "username": "postgres",
             "name": "localhost",
             "password": "fati4fleur"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "localhost",
+            "database": "currency_exchange",
+            "username": "postgres",
+            "password": "fati4fleur"
         }
     ]
 }

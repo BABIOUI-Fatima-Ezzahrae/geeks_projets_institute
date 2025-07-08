@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">Users:</div>
+    <ul class="list">
+        <li>John</li>
+        <li>Pete</li>
+    </ul>
+    <ul class="list">
+        <li>David</li>
+        <li>Sarah</li>
+        <li>Dan</li>
+    </ul>
+
+    <script>
+        let x = document.getElementById("container");
+        console.log(x);
+        let listItems = document.querySelectorAll("li");
+
+        for (let i = 0; i < listItems.length; i++) {    
+            if (listItems[i].textContent === "Pete") {
+                listItems[i].textContent = "Richard";
+            }
+        };
+
+        let secondUl = document.querySelectorAll(".list")[1];
+        let secondLi = secondUl.querySelectorAll("li")[1];
+        if (secondLi) {
+            secondUl.removeChild(secondLi);
+        };
+
+        let lists = document.querySelectorAll(".list");
+        lists.forEach(function(ul) {
+            ul.querySelector("li").textContent = "Fatima";
+        });
+
+        let classList = document.querySelectorAll(".list");
+        classList.forEach(function(ul) {
+            ul.classList.add("student_list");
+        });
+
+        let first = document.querySelectorAll(".list")[0];
+        if (first) {
+            first.classList.add("university", "attendance");
+        }
+
+        x.style.backgroundColor = "lightblue";
+        x.style.padding = "25px";
+
+        let listItems1 = document.querySelectorAll(".list")[0].querySelectorAll("li");
+        for (let i = 0; i < listItems1.length; i++) {    
+            if (listItems1[i].textContent === "Dan") {
+                listItems1[i].style.display = "none";
+            }
+        };
+
+        for (let i = 0; i < listItems.length; i++) {    
+            if (listItems[i].textContent === "Richard") {
+                listItems[i].style.border = "1px solid black";
+            }
+        };
+
+        let corps = document.body;
+        corps.style.fontSize = "20px";
+
+        if (x.style.backgroundColor === "lightblue"){
+            const listItems = document.querySelectorAll(".list")[0].querySelectorAll("li");
+            const name1 = listItems[0].textContent;
+            const name2 = listItems[1].textContent;
+            console.log(`Hello ${name1} and ${name2}`);
+        }
+    </script>
+</body>
+</html>

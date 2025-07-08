@@ -1,0 +1,30 @@
+from flask import Flask, request, jsonify
+import requests
+from dotenv import load_dotenv
+import os
+import psycopg2
+
+load_dotenv()
+app = Flask(__name__)
+
+def get_connection():
+    return psycopg2.connect(
+        dbname=os.getenv("DB_NAME"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+        host=os.getenv("DB_HOST"),
+        port=os.getenv("DB_PORT")
+    )
+
+@app.route('/exchange-rate', methods=['GET'])
+def get_exchange_rate():
+    try:
+        conn = get_connection()
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM exchange_rates")
+        rates = cursor.fetchall()
+        cursor.close()
+        conn.close()
+        return jsonify(rates)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
