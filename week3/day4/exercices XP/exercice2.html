@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="firstname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lastname"><br><br>
+        <input type="submit" value="Submit" id="submit">
+    </form> 
+    <ul class="usersAnswer"></ul>
+    <script>
+        const form = document.querySelector('form');
+        console.log(form);
+
+        const f_inputs = document.getElementById('fname');
+        const l_inputs = document.getElementById('lname');
+        console.log(f_inputs);
+        console.log(l_inputs);
+
+        const firstNameInput = document.getElementsByName('firstname')[0];
+        const lastNameInput = document.getElementsByName('lastname')[0];
+        console.log(firstNameInput);
+        console.log(lastNameInput);
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents the default form submission (page reload)
+            const firstName = firstNameInput.value.trim();
+            const lastName = lastNameInput.value.trim();
+
+            if (firstName === '' || lastName === '') {
+            alert('Please fill in both fields.');
+            return;
+            }
+
+            const ul = document.querySelector('.usersAnswer');
+            ul.innerHTML = ''; 
+            
+            const li1 = document.createElement('li');
+            li1.textContent = firstName;
+            ul.appendChild(li1);
+
+            const li2 = document.createElement('li');
+            li2.textContent = lastName;
+            ul.appendChild(li2);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        .fade-out {
+            animation: fadeOut 1s forwards;
+        }
+
+    </style>
+</head>
+<body>
+    <article>
+        <h1> Some Facts </h1>
+        <h2> The Chocolate </h2>
+        <h3> History of the chocolate </h3>
+        <p> Chocolate is made from tropical Theobroma cacao tree seeds. 
+            Its earliest use dates back to the Olmec civilization in Mesoamerica.</p>
+        <p> After the European discovery of the Americas, chocolate became 
+            very popular in the wider world, and its demand exploded. </p>
+        <p> Chocolate has since become a popular food product that millions enjoy every day, 
+            thanks to its unique, rich, and sweet taste.</p> 
+        <p> But what effect does eating chocolate have on our health?</p> 
+        <button>Click me</button>
+    </article>
+    <script>
+        const title = document.querySelector('h1');
+        console.log(title.textContent);
+        
+        const parag_first = document.querySelector('p');
+        parag_first.remove();
+
+        const title_h2 = document.querySelector('h2');
+        title_h2.addEventListener('click', function() {
+            title_h2.style.backgroundColor = 'red';
+        });
+
+        const title_h3 = document.querySelector('h3');
+        title_h3.addEventListener('click', function() {
+            title_h3.style.display = 'none';
+        });
+    
+        const button = document.querySelector('button');
+        const parags = document.querySelectorAll('p');
+    
+        button.addEventListener('click', function() {
+            parags.forEach(function(para) {
+                para.style.fontWeight = 'bold';
+
+            });
+        });
+
+    
+        title.addEventListener('mouseover', function() {
+    
+            title.style.fontSize = Math.random()*(100 - 0 + 1)+'px';
+    
+        });
+
+
+    
+        const parag2 = parags[1];
+    
+        parag2.addEventListener('mouseover', function() {
+    
+            parag2.classList.add('fade-out');
+    
+        });
+    </script>
+</body>
+</html>
