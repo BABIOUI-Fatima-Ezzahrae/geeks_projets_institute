@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'PingSan';
+  src: url('./fonts/PingSan.woff2') format('woff2'),
+       url('./fonts/PingSan.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'StickyGlue';
+  src: url('./fonts/StickyGlue.woff2') format('woff2'),
+       url('./fonts/StickyGlue.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brightier';
+  src: url('./fonts/Brightier.woff2') format('woff2'),
+       url('./fonts/Brightier.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: blueviolet;
+  background-image: 
+    url('https://github.com/devtlv/studentsGitHub/blob/master/JS/Week%204/Day5/Mini%20Projects/Mini%20Project%201%20(Robots)/circuit-pattern.png?raw=true');
+  background-repeat: repeat;
+  background-size: contain;
+  background-blend-mode: multiply;
+}
+
+#navs{
+    background-color: rgb(75, 182, 75);
+    padding-left: 5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+#form {
+  flex-grow: 0.8;
+}
+#form input {
+  width: 100%;
+  padding: 5px;
+  font-size: 1rem;
+  height: 28px;
+  background-color: lightsteelblue;
+}
+#container > div {
+  background-color: darkcyan;
+  background-image: url('https://github.com/devtlv/studentsGitHub/blob/master/JS/Week%204/Day5/Mini%20Projects/Mini%20Project%201%20(Robots)/card-pattern.png?raw=true');
+  background-repeat: repeat;
+  background-size: contain;
+  background-blend-mode: multiply;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 220px;
+  height: 350px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+#container img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+#container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 0.1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+  justify-content: center;
+}
+#container h1 {
+  font-family: 'PingSan', cursive, sans-serif;
+  font-size: 1.5rem;
+  color: #333;
+  margin: 10px 0 5px 0;
+}
+
+#container p {
+  font-family: 'StickyGlue', cursive, sans-serif;
+  font-size: 1.2rem;
+  color: darkgrey;
+  margin: 5px 0;
+  letter-spacing: 0.05em;
+}
+#container > div p:nth-of-type(2) {
+  font-family: 'Brightier', cursive, sans-serif;
+  font-size: 1rem;
+  color: black;
+  letter-spacing: 0.04em;
+}
+
+.monoton {
+      font-family: 'Monoton', cursive;
+      color: transparent;
+      -webkit-text-stroke: 0.2px #000;
+}
