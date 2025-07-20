@@ -22,7 +22,7 @@ const marioGame = {
   },
 }
 
-const jsonMarioGame = JSON.stringify(marioGame, null, 2);
+const jsonMarioGame = JSON.stringify(marioGame);
 console.log(jsonMarioGame);
 
 // Nested objects are also converted into JSON format and included in the final string.
