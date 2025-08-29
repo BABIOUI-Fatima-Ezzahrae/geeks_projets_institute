@@ -36,4 +36,4 @@ yarn-error.log*
 .parcel-cache/
 
 package.json
-package-local.json
+package-lock.json
