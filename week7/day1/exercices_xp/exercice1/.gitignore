@@ -1,0 +1,39 @@
+# 📦 Node dependencies
+node_modules/
+
+# 🧪 Test coverage
+coverage/
+
+# 🏗️ Build output
+build/
+
+# 📁 Yarn / PnP
+.pnp/
+.pnp.js
+
+# ⚙️ Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ⚠️ Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 💻 macOS
+.DS_Store
+
+# 📂 VSCode config (optionnel si tu veux ignorer tes réglages perso)
+.vscode/
+
+# ⚛️ React cache (CRA v5+)
+.react-cache/
+
+# 📦 Optional: .parcel-cache (si tu utilises Parcel au lieu de Webpack)
+.parcel-cache/
+
+package.json
+package-local.json

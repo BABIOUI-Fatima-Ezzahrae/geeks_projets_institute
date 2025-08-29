@@ -30,6 +30,21 @@
             "database": "currency_exchange",
             "username": "postgres",
             "password": "fati4fleur"
+        },
+        {
+            "pgOptions": {
+                "ssl": {
+                    "rejectUnauthorized": true
+                }
+            },
+            "previewLimit": 50,
+            "server": "ep-floral-dust-a2zhp4nu-pooler.eu-central-1.aws.neon.tech",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "username": "neondb_owner",
+            "password": "npg_og5dVGyQ2xzK",
+            "name": "Neon",
+            "database": "neondb"
         }
     ]
 }
